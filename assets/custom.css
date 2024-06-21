@@ -1,0 +1,11 @@
+.rc-slider-track {
+    background-color: #FF9053 !important; /* Оранжевый цвет */
+}
+
+.rc-slider-handle {
+    border-color: #FF9053 !important; /* Оранжевый цвет */
+}
+
+.rc-slider-dot-active {
+    border-color: #FF9053 !important; /* Оранжевый цвет */
+}
