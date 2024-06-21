@@ -29,7 +29,7 @@
 ## Ссылка на датасет
 <https://www.kaggle.com/datasets/thedevastator/global-video-game-sales>
 
-## Установка и Запуск
+## Установка и запуск
 
 1. Клонирование репозитория 
 
