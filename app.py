@@ -1,7 +1,7 @@
 import dash_bootstrap_components as dbc
 
 from dash import Dash, Input, Output, dcc, html
-from pages import overall, platforms, genres
+from pages import overall, platforms, genres, info
 
 external_stylesheets = [dbc.themes.UNITED, '/assets/custom.css']
 app = Dash(__name__, external_stylesheets=external_stylesheets,  use_pages=True)
@@ -38,6 +38,7 @@ sidebar = html.Div(
                 dbc.NavLink("Общая статистика", href="/", active="exact", style=NAVLINK_STYLE),
                 dbc.NavLink("Платформы", href="/page-1", active="exact", style=NAVLINK_STYLE),
                 dbc.NavLink("Жанры", href="/page-2", active="exact", style=NAVLINK_STYLE),
+                dbc.NavLink("О проекте", href="/page-3", active="exact", style=NAVLINK_STYLE),
             ],
             vertical=True,
             pills=True,
@@ -61,6 +62,8 @@ def render_page_content(pathname):
         return platforms.layout
     elif pathname == "/page-2":
         return genres.layout
+    elif pathname == "/page-3":
+        return info.layout
     return html.Div(
         [
             html.H1("404: Not found", className="text-danger"),
